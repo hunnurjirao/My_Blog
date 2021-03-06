@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header.ejs'); -%>
+
+    <body>
+        <%- include('layouts/navbar.ejs'); -%>
+
+
+
+            <!-- Page Header -->
+            <header class="masthead" style="background-image: url('/img/contact-bg.jpg')">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <div class="page-heading">
+                                <h1>Login into your Account</h1>
+                                <span class="subheading">Welcome!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <p>Login here!</p>
+
+                        <form action="/users/login" method="POST" enctype="multipart/form-data">
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls">
+                                    <label>User Name</label>
+                                    <input type="text" class="form-control" placeholder="User Name" id="username"
+                                        name='username'>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls">
+                                    <label>Passowrd</label>
+                                    <input type="password" class="form-control" id="Passowrd" name="password"
+                                        placeholder="********">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" id="sendMessageButton">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <%- include('layouts/footer'); -%>
+                <%- include('layouts/scripts'); -%>
+    </body>
+
+</html>
